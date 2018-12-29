@@ -7,7 +7,7 @@
     <ProjectGuid>c0cd5157-055d-4fe8-89de-77d22edc24fa</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>runserver.py</StartupFile>
+    <StartupFile>Chatbot\Chatbot_v2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,19 +28,53 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Chatbot\attributegetter.py" />
+    <Compile Include="Chatbot\Chatbot_v2.py" />
+    <Compile Include="Chatbot\Contexts.py" />
+    <Compile Include="Chatbot\generatengrams.py" />
+    <Compile Include="Chatbot\Intents.py" />
+    <Compile Include="Chatbot\landing.py" />
     <Compile Include="runserver.py" />
     <Compile Include="MLComplete\__init__.py" />
     <Compile Include="MLComplete\views.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Chatbot\database\" />
+    <Folder Include="Chatbot\entities\" />
+    <Folder Include="Chatbot\intents\" />
+    <Folder Include="Chatbot\params\" />
+    <Folder Include="Chatbot\raghu\" />
     <Folder Include="MLComplete\" />
     <Folder Include="MLComplete\static\" />
     <Folder Include="MLComplete\static\content\" />
     <Folder Include="MLComplete\static\fonts\" />
     <Folder Include="MLComplete\static\scripts\" />
     <Folder Include="MLComplete\templates\" />
+    <Folder Include="Chatbot\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Chatbot\Chatbot Architecture.pdf" />
+    <Content Include="Chatbot\Chatbot_v2.ipynb" />
+    <Content Include="Chatbot\database\Baby.csv" />
+    <Content Include="Chatbot\database\BabyNAme.csv" />
+    <Content Include="Chatbot\database\Restaurant.csv" />
+    <Content Include="Chatbot\entities\budget.dat" />
+    <Content Include="Chatbot\entities\cuisine.dat" />
+    <Content Include="Chatbot\entities\ethnicity.dat" />
+    <Content Include="Chatbot\entities\gender.dat" />
+    <Content Include="Chatbot\entities\letter.bat" />
+    <Content Include="Chatbot\entities\location.dat" />
+    <Content Include="Chatbot\entities\region.dat" />
+    <Content Include="Chatbot\entities\religion.dat" />
+    <Content Include="Chatbot\intents\BabyNameSuggestion.dat" />
+    <Content Include="Chatbot\intents\RestaurantBooking.dat" />
+    <Content Include="Chatbot\landing.cfg" />
+    <Content Include="Chatbot\params\newparams.cfg" />
+    <Content Include="Chatbot\raghu\Mobile Trouble shooting flow chart.jpeg" />
+    <Content Include="Chatbot\raghu\MobileTroubleShooting.dat" />
+    <Content Include="Chatbot\raghu\Problem.dat" />
+    <Content Include="Chatbot\Server Access and File transfer.pdf" />
+    <Content Include="Chatbot\Untitled.ipynb" />
     <Content Include="MLComplete\templates\urlbank.html" />
     <Content Include="requirements.txt" />
     <Content Include="MLComplete\static\content\bootstrap.css" />

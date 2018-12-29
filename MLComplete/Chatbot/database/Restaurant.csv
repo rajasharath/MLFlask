@@ -1,0 +1,129 @@
+RestaurantName,Location,Cuisine,Cost
+Absolute Barbecue,East,Albanian,Cheap
+Almond House,West,Argentina,Medium
+Punjab Grill,North,Andhra,High
+Bikanerwala,South,Anglo-Indian,Medium
+TGI Fridays,North,Arab,High
+Tatva,South,Armenian,Cheap
+Cafe Bahar,East,Assyrian,Medium
+Cowboys and Angels,West,Awadhi,High
+Mandil,East,Azerbaijani,Medium
+Smoky Pitara,West,Balochi,High
+Bonsai,South,Belarusian,Cheap
+Dhaba Estd 1986 Delhi,East,Bengali,Medium
+Flechazo,West,Berber,High
+Rajasthani Thali,East,Buddhist,Cheap
+Conou,West,Bulgarian,Medium
+Jalpaan,South,Cajun,High
+The Coffee Cup,East,Chechen,Medium
+Sahib's Barbeque,West,Chinese,High
+Olive Bistro,East,Chinese Islamic,Cheap
+Paradise,West,Circassian,Medium
+Exotica,South,Crimean Tatar,High
+Rajasthani Thali,East,Danish,Medium
+Conou,West,Estonian,High
+Jalpaan,South,French,Cheap
+Bikanerwala,East,Filipino,Medium
+TGI Fridays,West,Georgian,High
+Tatva,South,Goan,Medium
+Cafe Bahar,East,Goan Catholic,High
+Cowboys and Angels,West,Greek,Cheap
+Mandil,South,Hyderabad,Medium
+Smoky Pitara,East,Indian,High
+Bonsai,West,Indian Chinese,Medium
+Dhaba Estd 1986 Delhi,South,Indian Singaporean,High
+Flechazo,East,Indonesian,Cheap
+Rajasthani Thali,West,Inuit,Medium
+Conou,South,Italian American,High
+Jalpaan,East,Italian,Cheap
+The Coffee Cup,West,Japanese,Medium
+Almond House,East,Albanian,High
+Punjab Grill,West,Argentina,Medium
+Bikanerwala,South,Andhra,High
+TGI Fridays,East,Anglo-Indian,Cheap
+Tatva,West,Arab,Medium
+Cafe Bahar,South,Armenian,High
+Cowboys and Angels,East,Assyrian,Medium
+Mandil,East,Awadhi,Medium
+Smoky Pitara,East,Azerbaijani,High
+Bonsai,West,Balochi,Medium
+Dhaba Estd 1986 Delhi,South,Belarusian,High
+Flechazo,East,Bengali,Cheap
+Rajasthani Thali,West,Berber,Medium
+Conou,South,Buddhist,High
+Jalpaan,East,Bulgarian,Medium
+The Coffee Cup,South,Cajun,High
+Sahib's Barbeque,East,Chechen,Cheap
+Olive Bistro,West,Chinese,Medium
+Paradise,South,Chinese Islamic,High
+Exotica,East,Circassian,Cheap
+Bikanerwala,West,Crimean Tatar,Medium
+TGI Fridays,East,Danish,High
+Tatva,West,Estonian,Medium
+Cafe Bahar,South,French,High
+Cowboys and Angels,East,Filipino,Cheap
+Mandil,West,Georgian,Medium
+Smoky Pitara,South,Goan,High
+Bonsai,East,Goan Catholic,Medium
+Dhaba Estd 1986 Delhi,East,Greek,High
+Flechazo,East,Hyderabad,Cheap
+Rajasthani Thali,West,Indian,Medium
+Conou,South,Indian Chinese,High
+Jalpaan,East,Indian Singaporean,Medium
+The Coffee Cup,West,Indonesian,High
+Conou,South,Inuit,Medium
+Jalpaan,East,Italian American,High
+The Coffee Cup,West,Italian,Cheap
+Almond House,South,Japanese,Medium
+Punjab Grill,East,Jewish,High
+Bikanerwala,South,Karnataka,Cheap
+TGI Fridays,East,Kazakh,Medium
+Tatva,West,Keralite,High
+Cafe Bahar,South,Korean,Medium
+Cowboys and Angels,East,Kurdish,High
+Mandil,West,Laotian,Cheap
+Smoky Pitara,East,Latvian,Medium
+Bonsai,West,Lithuanian,High
+Dhaba Estd 1986 Delhi,South,Louisiana Creole,Medium
+Flechazo,East,Maharashtrian,Medium
+Rajasthani Thali,West,Mangalorean,High
+Exotica,South,Malay,Medium
+Bikanerwala,East,Malaysian Chinese,High
+TGI Fridays,East,Malaysian Indian,Cheap
+Tatva,East,Mediterranean,Medium
+Cafe Bahar,West,Mexican,High
+Cowboys and Angels,South,Mordovian,Medium
+Mandil,East,Mughal,High
+Smoky Pitara,West,Native American,Cheap
+Bonsai,South,Nepalese,Medium
+Dhaba Estd 1986 Delhi,East,New Mexican,High
+Flechazo,West,Odia,Cheap
+Rajasthani Thali,East,Parsi,Medium
+Conou,West,Pashtun,High
+Jalpaan,South,Polish,Medium
+The Coffee Cup,East,Pennsylvania Dutch,High
+Conou,West,Pakistani,Cheap
+Jalpaan,South,Peranakan,Medium
+The Coffee Cup,East,Persian,Medium
+Almond House,East,Peruvian,High
+Punjab Grill,East,Portuguese,Medium
+Bikanerwala,South,Punjabi,High
+Smoky Pitara,East,Rajasthani,Cheap
+Bonsai,West,Romanian,Medium
+Dhaba Estd 1986 Delhi,East,Russian,High
+Flechazo,West,Sami,Cheap
+Rajasthani Thali,South,Serbian,Medium
+Conou,East,Sindhi,High
+Jalpaan,West,Slovak,Medium
+The Coffee Cup,South,Slovenian,Medium
+Conou,East,Somali,High
+Jalpaan,East,South Indian,Cheap
+The Coffee Cup,West,Sri Lankan,Medium
+Almond House,East,Tatar,High
+Flechazo,West,Thai,Medium
+Rajasthani Thali,South,Turkish,High
+Conou,East,Tamil,Cheap
+Jalpaan,West,Udupi,Medium
+The Coffee Cup,South,Ukrainian,High
+Conou,East,Yamal,Cheap
+Jalpaan,East,Zanzibari,Medium
