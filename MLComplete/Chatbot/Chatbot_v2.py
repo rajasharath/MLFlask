@@ -142,7 +142,9 @@ def intentIdentifier(clean_input, context,current_intent):
 
     # If current intent is not none, stick with the ongoing intent else select an intent.
     if current_intent == None:
-        if clean_input == "baby":
+        if clean_input == 'mobile':
+            current_intent = loadIntent('Chatbot/params/newparams.cfg', 'MobileTroubleShooting')
+        elif clean_input == "baby":
             current_intent = loadIntent('Chatbot/params/newparams.cfg', 'BabyNameSuggestion')
         elif clean_input == 'restaurant':
             current_intent = loadIntent('Chatbot/params/newparams.cfg', 'RestaurantBooking')

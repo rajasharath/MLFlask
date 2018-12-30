@@ -28,6 +28,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Bot\datacamp.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Chatbot\attributegetter.py" />
     <Compile Include="Chatbot\Chatbot_v2.py" />
     <Compile Include="Chatbot\Contexts.py" />
@@ -51,6 +54,7 @@
     <Folder Include="MLComplete\static\scripts\" />
     <Folder Include="MLComplete\templates\" />
     <Folder Include="Chatbot\" />
+    <Folder Include="Bot\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Chatbot\Chatbot Architecture.pdf" />
@@ -64,6 +68,8 @@
     <Content Include="Chatbot\entities\gender.dat" />
     <Content Include="Chatbot\entities\letter.bat" />
     <Content Include="Chatbot\entities\location.dat" />
+    <Content Include="Chatbot\entities\powerorbatterychargingmenu.dat" />
+    <Content Include="Chatbot\entities\menuoptions.dat" />
     <Content Include="Chatbot\entities\region.dat" />
     <Content Include="Chatbot\entities\religion.dat" />
     <Content Include="Chatbot\intents\BabyNameSuggestion.dat" />
