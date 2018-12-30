@@ -28,6 +28,9 @@ def check_actions(current_intent, attributes, context):
             return perform_action()
     '''
     action_performed = current_intent.action
+    if current_intent.action == 'GetMobileIssues':
+        menuoptions = getAttributeValue(attributes, "menuoptions")
+
     if current_intent.action == 'BookRestaurant':
         # Select a restaurant based on Cuisine, Budget and location.
         cuisine = getAttributeValue(attributes, "cuisine")
