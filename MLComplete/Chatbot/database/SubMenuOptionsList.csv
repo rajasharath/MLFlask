@@ -1,0 +1,30 @@
+Option,SubMenuOptions
+Power battery charging,Device Cannot Power On.
+Power battery charging,Battery Drains Fast
+Power battery charging,Not Charging
+Physical Liquid damage,Cracked Screen
+Cracked Screen,Call customer agent and provide assistance
+Cracked Screen,How to find my IMEI number
+Signal Network,Airplane Mode is switched on
+Signal Network,Eject the SIM tray and insert again
+Signal Network,SIM card is enabled
+Signal Network,SIM card works on another device
+Signal Network,Ask the mobile carrier for help
+Phone Call,Airplane Mode is switched on
+Phone Call,Eject the SIM tray and insert again
+Phone Call,SIM card is enabled
+Phone Call,SIM card works on another device
+Phone Call,Ask the mobile carrier for help
+Memory Performance,Overheat
+Overheat,Close excessive game apps
+Overheat,Close an app which causing this issue.
+Hang Crash,Reboot device
+Hang and Crash,check available space for file manager
+Memory Performance,Hang and Crash
+Device Cannot Power On,Try to power it on again by pressing power button for 10-15 seconds
+Device Cannot Power On,Charge for about 10 minutes and try to power it on with the power button
+Device Cannot Power On,Battery drains fast
+Battery drains fast,Turn off Bluetooth Wi-Fi GPS
+Battery drains fast,Turn on automatic brightness mode
+Battery drains fast,force stop an app which is consuming more battery
+Need more help,Call customer agent and provide assistance

@@ -61,6 +61,7 @@
     <Content Include="Chatbot\Chatbot_v2.ipynb" />
     <Content Include="Chatbot\database\Baby.csv" />
     <Content Include="Chatbot\database\BabyNAme.csv" />
+    <Content Include="Chatbot\database\SubMenuOptionsList.csv" />
     <Content Include="Chatbot\database\Restaurant.csv" />
     <Content Include="Chatbot\entities\budget.dat" />
     <Content Include="Chatbot\entities\cuisine.dat" />
@@ -73,6 +74,7 @@
     <Content Include="Chatbot\entities\region.dat" />
     <Content Include="Chatbot\entities\religion.dat" />
     <Content Include="Chatbot\intents\BabyNameSuggestion.dat" />
+    <Content Include="Chatbot\intents\MobileTroubleShooting.dat" />
     <Content Include="Chatbot\intents\RestaurantBooking.dat" />
     <Content Include="Chatbot\landing.cfg" />
     <Content Include="Chatbot\params\newparams.cfg" />

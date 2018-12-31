@@ -31,6 +31,12 @@ def check_actions(current_intent, attributes, context):
     if current_intent.action == 'GetMobileIssues':
         menuoptions = getAttributeValue(attributes, "menuoptions")
 
+        subMenuOptions = getSubMenuOptions(menuoptions)
+        if len(subMenuOptions) == 0:
+            action_performed = 'No options found as per your choice, Please try with another combination.'
+        else:
+            action_performed = "Found the following Sub-Menu options for you \n" + "\n".join(subMenuOptions)
+
     if current_intent.action == 'BookRestaurant':
         # Select a restaurant based on Cuisine, Budget and location.
         cuisine = getAttributeValue(attributes, "cuisine")
@@ -66,6 +72,19 @@ def getAttributeValue(attributes, key):
     value = value.strip().lower()
 
     return value
+
+def getSubMenuOptions(menuOption):
+     fn_tolower = lambda x : x.lower().strip()
+
+     subMenuOptions = pd.read_csv('Chatbot/database/SubMenuOptionsList.csv', converters={'Option': fn_tolower})
+     query = "Option == '" + menuOption + "'";
+
+     selectedOption = subMenuOptions.query(query)
+
+     if len(selectedOption) == 0: # No restaurants found
+        return []
+     else:
+        return list(selectedOption["SubMenuOptions"])
 
 def selectRestaurant(cuisine, cost, location):
     fn_tolower = lambda x : x.lower().strip()
