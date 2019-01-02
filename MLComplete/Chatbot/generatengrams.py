@@ -3,6 +3,7 @@ import os
 limit = 3
 
 def ngrams(lines):
+    print("generatengrams_ngrams")
     global limit
     ngrams = []
     
@@ -23,6 +24,7 @@ def ngrams(lines):
     return ngrams
 
 def cleanLines(lines):
+    print("generatengrams_cleanLines")
     for i in range(len(lines)):
         lines[i] = lines[i][:-1].split()
         for x in range(len(lines[i])):
@@ -30,6 +32,7 @@ def cleanLines(lines):
     return lines
 
 def score(uinput, tngramsdict):
+    print("generatengrams_score")
     global limit
     scores = []
     uinput = [uinput.lower().split()]
@@ -68,6 +71,7 @@ def score(uinput, tngramsdict):
     return scores
 
 def init():
+    print("generatengrams_init")
     ngramsdict = {}
     path = 'Chatbot/intents/'
 
@@ -81,6 +85,7 @@ def init():
     return ngramsdict
 
 def ngrammatch(uinput):
+    print("generatengrams_ngrammatch")
     ngramsdict = init()
     # print(ngramsdict)
     scores = score(uinput, ngramsdict)

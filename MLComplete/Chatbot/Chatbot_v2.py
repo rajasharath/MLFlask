@@ -1,11 +1,3 @@
-
-# coding: utf-8
-
-# In[ ]:
-
-
-#from textblob import TextBlob
-#from attributegetter import *
 from generatengrams import ngrammatch
 from Contexts import *
 import json
@@ -15,18 +7,8 @@ import os
 import re
 import pandas as pd
 
-
-# In[ ]:
-
-
-def check_actions(current_intent, attributes, context):
-    '''This function performs the action for the intent
-    as mentioned in the intent config file'''
-    '''Performs actions pertaining to current intent
-    for action in current_intent.actions:
-        if action.contexts_satisfied(active_contexts):
-            return perform_action()
-    '''
+def check_actions(current_intent, attributes, context): 
+    print("Chatbot_v2_check_actions")
     action_performed = current_intent.action
     if current_intent.action == 'GetMobileIssues':
         menuoptions = getAttributeValue(attributes, "menuoptions")
@@ -36,44 +18,21 @@ def check_actions(current_intent, attributes, context):
             action_performed = 'No options found as per your choice, Please try with another combination.'
         else:
             action_performed = "Found the following Sub-Menu options for you \n" + "\n".join(subMenuOptions)
-
-    if current_intent.action == 'BookRestaurant':
-        # Select a restaurant based on Cuisine, Budget and location.
-        cuisine = getAttributeValue(attributes, "cuisine")
-        budget = getAttributeValue(attributes, "budget")
-        location = getAttributeValue(attributes, "location")
-
-        restaurants = selectRestaurant(cuisine, budget, location)
-        if len(restaurants) == 0:
-            action_performed = 'No restaurant found as per your choice, Please try with another combination.'
-        else:
-            action_performed = "Found the following restaurants for you \n" + "\n".join(restaurants)
-    elif current_intent.action == 'GetBabyNames':
-        # Get all the parameters.
-        ethnicity = getAttributeValue(attributes, "ethnicity")
-        region = getAttributeValue(attributes, "region")
-        religion = getAttributeValue(attributes, "religion")
-        gender = getAttributeValue(attributes, "gender")
-        starting_letter = getAttributeValue(attributes, "letter")
-        numerology = getAttributeValue(attributes, "numerology")
-
-        # Select baby name based on input provided
-        baby_names = suggestBabyName(ethnicity, region, religion, gender, starting_letter, numerology)
-        if len(baby_names) == 0:
-            action_performed = 'Sorry, we could not find a suitable name for your baby, Please try a different combination.'
-        else:
-            action_performed = 'Following are the names you might want to consider \n' + "\n".join(baby_names)
+    
+    #elif if required
 
     context = IntentComplete()
     return action_performed, context
 
 def getAttributeValue(attributes, key):
+    print("Chatbot_v2_getAttributeValue")
     value = str(attributes[key])
     value = value.strip().lower()
 
     return value
 
 def getSubMenuOptions(menuOption):
+     print("Chatbot_v2_getSubMenuOptions")
      fn_tolower = lambda x : x.lower().strip()
 
      subMenuOptions = pd.read_csv('Chatbot/database/SubMenuOptionsList.csv', converters={'Option': fn_tolower})
@@ -81,42 +40,13 @@ def getSubMenuOptions(menuOption):
 
      selectedOption = subMenuOptions.query(query)
 
-     if len(selectedOption) == 0: # No restaurants found
+     if len(selectedOption) == 0: # No Options found
         return []
      else:
         return list(selectedOption["SubMenuOptions"])
 
-def selectRestaurant(cuisine, cost, location):
-    fn_tolower = lambda x : x.lower().strip()
-    restaurants = pd.read_csv('Chatbot/database/Restaurant.csv', converters={'Cuisine': fn_tolower, 'Cost': fn_tolower, 'Location': fn_tolower})
-    query = "Cuisine == '" + cuisine + "' & Cost == '" + cost + "' & Location == '" + location + "'";
-
-    selectedRestaurants = restaurants.query(query)
-
-    if len(selectedRestaurants) == 0: # No restaurants found
-        return []
-    else:
-        return list(selectedRestaurants["RestaurantName"])
-
-def suggestBabyName(ethnicity, region, religion, gender, starting_letter, numerology):
-    fn_tolower = lambda x : x.lower().strip()
-
-    body_converters = {
-            'Name': fn_tolower, 'Gender': fn_tolower, 'StartingLetter': fn_tolower,
-            'Ethnicity': fn_tolower, 'Religion': fn_tolower, 'Region': fn_tolower, 'Numerology': fn_tolower
-    }
-    baby_names = pd.read_csv('./database/Baby.csv', converters=body_converters)
-
-    select_query = "Gender == '{}' & StartingLetter == '{}' & Ethnicity == '{}' & Religion == '{}' & Region == '{}' & NumerologyConstraints == '{}'"\
-                        .format(gender, starting_letter, ethnicity, religion, region, numerology)
-
-    selected_baby_names = baby_names.query(select_query)
-    if len(selected_baby_names) == 0: # No baby names found
-        return []
-    else:
-        return list(selected_baby_names["Name"])
-
 def check_required_params(current_intent, attributes, context):
+    print("Chatbot_v2_check_required_params")
     '''Collects attributes pertaining to the current intent'''
     for para in current_intent.params:
         if para.required:
@@ -133,10 +63,8 @@ def check_required_params(current_intent, attributes, context):
 
     return None, context
 
-
-def input_processor(user_input, context, attributes, intent):
-    '''Spellcheck and entity extraction functions go here'''
-    
+def input_processor(user_input, context, attributes, intent):  
+    print("Chatbot_v2_input_processor")
     # uinput = TextBlob(user_input).correct().string
     
     #update the attributes, abstract over the entities in user input
@@ -145,12 +73,14 @@ def input_processor(user_input, context, attributes, intent):
     return attributes, cleaned_input
 
 def loadIntent(path, intent):
+    print("Chatbot_v2_loadIntent: Path:"+path+"     Intent:"+intent)
     with open(path) as fil:
         dat = json.load(fil)
         intent = dat[intent]
         return Intent(intent['intentname'],intent['Parameters'], intent['actions'])
 
 def intentIdentifier(clean_input, context,current_intent):
+    print("Chatbot_v2_IntentIdentifier")
     if context.active == False:
         return current_intent
 
@@ -176,6 +106,7 @@ def intentIdentifier(clean_input, context,current_intent):
     return current_intent
 
 def getattributes(uinput,context,attributes):
+    print("Chatbot_v2_getattributes")
     '''This function marks the entities in user input, and updates
     the attributes dictionary'''
     #Can use context to context specific attribute fetching
@@ -237,6 +168,7 @@ def getattributes(uinput,context,attributes):
 # In[ ]:
 
 def selectGenderType(gender):
+    print("Chatbot_v2_selectGenderType")
     if gender.lower() == "male" or gender.lower() == "boy" or gender.lower() == "m":
         return 'M'
     else:
@@ -244,7 +176,7 @@ def selectGenderType(gender):
 
 class Session:
     def __init__(self, attributes=None, active_contexts=[FirstGreeting(), IntentComplete() ]):
-        
+        print("Chatbot_v2_init: Self ")
         '''Initialise a default session'''
         
         #Active contexts not used yet, can use it to have multiple contexts
@@ -259,7 +191,8 @@ class Session:
         
         #attributes hold the information collected over the conversation
         self.attributes = {}
-        
+       
+    #unused   
     def update_contexts(self):
         '''Not used yet, but is intended to maintain active contexts'''
         for context in self.active_contexts:
@@ -267,7 +200,7 @@ class Session:
                 context.decrease_lifespan()
 
     def reply(self, user_input):
-        '''Generate response to user input'''
+        print("Chatbot_v2_reply: Self ")
         
         self.attributes, clean_input = input_processor(user_input, self.context, self.attributes, self.current_intent)
         
@@ -294,6 +227,7 @@ class Session:
 
 # session = Session()
 def restart():
+    print("Chatbot_v2_restart")
     print('BOT: Hi! How may I assist you?')
     session = Session()
     while True:

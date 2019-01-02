@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractmethod
 class Intent(object):
 
-
+   
 	def __init__(self, name, params, action):
 		self.name = name
 		self.action = action
